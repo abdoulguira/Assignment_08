@@ -2,6 +2,7 @@
 // Use state for the currently selected grid
 
 import React from "react";
+import Table from "./components/Table"
 
 export default class App extends React.Component {
   
@@ -22,8 +23,28 @@ export default class App extends React.Component {
           <button>Reset Colors</button>
         </div>
         <div class="selectColor">
+          <div>
+            <label for="color">Select a Color</label>
+            <select name="color" id="color-selector">
+              <option value="transparent">Clear</option>
+              <option value="red">Red</option>
+              <option value="orange">Orange</option>
+              <option value="yellow">Yellow</option>
+              <option value="green">Green</option>
+              <option value="blue">Blue</option>
+              <option value="indigo">Indigo</option>
+              <option value="violet">Violet</option>
+              <option value="brown">Brown</option>
+              <option value="black">Black</option>
+              <option value="white">White</option>
+            </select>
+          </div>
+        </div>
 
-    </div>
+        <Table />
+        {/* We need to use state in the other components to draw out the grid */}
+
+
       </div>
     )
   }
