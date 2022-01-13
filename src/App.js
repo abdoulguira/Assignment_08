@@ -42,7 +42,7 @@ export default class App extends React.Component {
         </div>
 
         <Table />
-        {/* We need to use state in the other components to draw out the grid */}
+        {/* We need to use state in order to draw out the grid */}
 
 
       </div>
