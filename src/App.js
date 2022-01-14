@@ -2,16 +2,24 @@
 // Use state for the currently selected grid
 
 import React from "react";
-import Table from "./components/Table"
+import Table from "./components/Table";
 
 export default class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      rows: 5, // right now we have to manually set rows and columns
+      columns: 5,
+      color: "transparent"
+    }
+  }
   
   
-  
+
   render() {
+    
     return (
       <div>
-        {/* <h1 style={{color: "blue"}}>React Painter</h1> */}
         <h1>React Painter</h1>
         <div className="buttons">
           <button>Add Column</button>
@@ -22,9 +30,9 @@ export default class App extends React.Component {
           <button>Fill All</button>
           <button>Reset Colors</button>
         </div>
-        <div class="selectColor">
+        <div className="selectColor">
           <div>
-            <label for="color">Select a Color</label>
+            <label htmlFor="color">Select a Color</label>
             <select name="color" id="color-selector">
               <option value="transparent">Clear</option>
               <option value="red">Red</option>
@@ -40,12 +48,8 @@ export default class App extends React.Component {
             </select>
           </div>
         </div>
-
-        <Table />
-        {/* We need to use state in order to draw out the grid */}
-
-
+        <div><Table state={this.state}></Table></div>
       </div>
-    )
+    );
   }
 }

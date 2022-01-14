@@ -1,7 +1,7 @@
 import React from "react";
 
-export default class TableCell extends React.Component {
-    render() {
-        return <div className="cell"></div>
-    }
+export default function TableCell() {
+
+    return <div className="cell"></div>
+
 }

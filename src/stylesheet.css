@@ -22,6 +22,7 @@ body {
     background-color: whitesmoke;
     color: whitesmoke;
     font-family: 'Courier New', Courier, monospace;
+    user-select: none;
     /* I was thinking of a background animated rainbow, but that's probably not a good idea
     background-image: repeating-linear-gradient(45deg, violet, indigo, blue, green, yellow, orange, red, violet);
     background-size: 2000% 2000%;
@@ -49,8 +50,7 @@ h1 {
     width: 1500px; 
     margin: 0 auto;
     display: flex;
-    justify-content: center;
-    
+    justify-content: center;  
 }
 
 button {
@@ -74,6 +74,7 @@ button:active {
 
 .selectColor {
     margin: auto;
+    margin-bottom: 10px;
     display: flex;
     justify-content: space-evenly;
     width: 900px;
@@ -114,4 +115,30 @@ button:active {
 .selectColor option {
     text-align: center;
     background-color: black;
+    /* border-radius: 25px; */
+}
+
+.grid {
+    width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+
+.row {
+    width: 1300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0;
+}
+
+.cell {
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    border: 2px solid black;
 }

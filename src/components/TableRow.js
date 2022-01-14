@@ -1,11 +1,19 @@
 import React from "react";
+import TableCell from "./TableCell"
 
-export default class TableRow extends React.Component {
-    render() {
+export default function TableRow(props) {
+
+    const gridColumns = []
+    const columns = props.columns
+
+
+
+    for(let i = 0; i < columns; i++) {
+        gridColumns.push(<TableCell></TableCell>)
+    }
         return (
-            <div>
-            
+            <div className="row">
+                {gridColumns}
             </div>
         )
-    }
 }
