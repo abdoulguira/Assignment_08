@@ -8,7 +8,7 @@ export default class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      rows: 0, 
+      rows: 5, 
       columns: 5, 
       color: "transparent"
     }
@@ -21,20 +21,13 @@ export default class App extends React.Component {
 
   deleteRow = () => {
     this.setState(prevState => ({rows: prevState.rows - 1,}))
+  }
 
   addColumn = () => {
-    if (this.state.rows === 0) {
-      this.resetStateToOne()
-      return
-    }
     this.setState(prevState => ({columns: prevState.columns + 1,}))
   }
 
   deleteColumn = () => {
-    if (this.state.columns === 1) {
-      this.resetState()
-      return
-    }
     this.setState(prevState => ({columns: prevState.columns - 1,}))
 
   }
