@@ -17,17 +17,3 @@ export default function Table(props) {
         </div>
     )
 }
-
-/* <div> //
- *      <div> // All rows returned from Table component
-            <div> // a row returned from TableRow component
-                <TableCell></TableCell> // a cell returned from TableCell component
-                <TableCell></TableCell>
-            </div>
-                <TableCell></TableCell>
-                <TableCell></TableCell>
-            <div>
-            </div>
- *      </div>
- * </div>
- */
