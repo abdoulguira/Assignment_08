@@ -40,8 +40,8 @@ export default class App extends React.Component {
 
   }
 
-  setColor(event) {
-    console.log(event.target.value)
+  setColor = (event) => {
+    this.setState({color : event.target.value})
   }
 
   render() {
