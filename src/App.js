@@ -8,13 +8,19 @@ export default class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      rows: 5, // right now we have to manually set rows and columns
-      columns: 5,
+      rows: 0, 
+      columns: 5, // right now we have to manually set columns
       color: "transparent"
     }
   }
   
-  
+  addRow = () => {
+    this.setState(prevState => ({rows: prevState.rows + 1,}))
+  }
+
+  deleteRow = () => {
+    this.setState(prevState => ({rows: prevState.rows - 1,}))
+  }
 
   render() {
     
@@ -23,9 +29,9 @@ export default class App extends React.Component {
         <h1>React Painter</h1>
         <div className="buttons">
           <button>Add Column</button>
-          <button>Add Row</button>
+          <button onClick={this.addRow}>Add Row</button>
           <button>Remove Column</button>
-          <button>Remove Row</button>
+          <button onClick={this.deleteRow}>Remove Row</button>
           <button>Fill Uncolored</button>
           <button>Fill All</button>
           <button>Reset Colors</button>
