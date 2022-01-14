@@ -35,7 +35,7 @@ export default class App extends React.Component {
   render() {
     
     return (
-      <div>
+      <div className="page">
         <h1>React Painter</h1>
         <div className="buttons">
           <button onClick={this.addColumn}>Add Column</button>

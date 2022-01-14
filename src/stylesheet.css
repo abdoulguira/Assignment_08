@@ -32,9 +32,15 @@ body {
     animation: rainbow 250s linear infinite; */
 }
 
+.page {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 h1 {
     width: 900px;
-    margin: 10px auto;
+    margin: 10px 0;
     text-align: center;
     font-size: 100px;
 
@@ -48,7 +54,7 @@ h1 {
 
 .buttons {
     width: 1500px; 
-    margin: 0 auto;
+    /* margin: 0 auto; */
     display: flex;
     justify-content: center;  
 }
