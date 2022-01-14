@@ -21,6 +21,7 @@ export default class App extends React.Component {
 
   deleteRow = () => {
     this.setState(prevState => ({rows: prevState.rows - 1,}))
+  }
 
   addColumn = () => {
     if (this.state.rows === 0) {
@@ -39,8 +40,11 @@ export default class App extends React.Component {
 
   }
 
+  setColor(event) {
+    console.log(event.target.value)
+  }
+
   render() {
-    
     return (
       <div>
         <h1>React Painter</h1>
@@ -56,7 +60,7 @@ export default class App extends React.Component {
         <div className="selectColor">
           <div>
             <label htmlFor="color">Select a Color</label>
-            <select name="color" id="color-selector">
+            <select name="color" id="color-selector" onChange={this.setColor}>
               <option value="transparent">Clear</option>
               <option value="red">Red</option>
               <option value="orange">Orange</option>
