@@ -1,0 +1,148 @@
+@keyframes rainbow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 25%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+body { 
+    margin: 0;
+    background-color: whitesmoke;
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+    user-select: none;
+    /* I was thinking of a background animated rainbow, but that's probably not a good idea
+    background-image: repeating-linear-gradient(45deg, violet, indigo, blue, green, yellow, orange, red, violet);
+    background-size: 2000% 2000%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbow 250s linear infinite; */
+}
+
+.page {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    width: 900px;
+    margin: 10px 0;
+    text-align: center;
+    font-size: 100px;
+
+    background-image: repeating-linear-gradient(45deg, violet, indigo, blue, green, rgb(182, 182, 1), red, violet);
+    background-size: 800% 800%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbow 8s linear infinite;
+}
+
+.buttons {
+    width: 1500px; 
+    display: flex;
+    justify-content: center;  
+}
+
+button {
+    margin: 0 10px 20px;
+    padding: 5px 10px;
+    width: auto;
+    border-style: none;
+    border-radius: 5px;
+    background-color: rgb(51, 180, 255);
+    color: whitesmoke;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+button:active {
+    background: linear-gradient(0deg, rgb(6, 112, 173) 20%, rgb(51, 180, 255) 100%);
+    box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+}
+
+.selectColor {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 900px;
+    color:rgb(51, 180, 255);
+    font-weight: bold;
+
+
+}
+
+.selectColor label {
+    font-size: 25px;
+
+    background-image: repeating-linear-gradient(45deg, blue, darkblue, navy, rgb(51, 180, 255));
+    background-size: 800% 800%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbow 4s linear infinite;
+}
+
+.selectColor select {
+    padding: 5px;
+    margin-left: 10px;
+    border-radius: 25px;
+    border-style: none;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+
+    background-image: repeating-linear-gradient(45deg, violet, indigo, blue, green, rgb(182, 182, 1), red, violet);
+    background-size: 800% 800%;
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    animation: rainbow 4s linear infinite;
+}
+
+.selectColor option {
+    text-align: center;
+    background-color: black;
+    /* border-radius: 25px; */
+}
+
+.grid {
+    width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+
+.row {
+    width: 1300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0;
+}
+
+.cell {
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    border: 2px solid black;
+}
