@@ -24,7 +24,7 @@ export default class App extends React.Component {
   }
 
   deleteRow = () => {
-    if (this.state.rows === 1) {
+    if (this.state.rows <= 1) {
       this.resetState()
       return
     }
@@ -40,7 +40,7 @@ export default class App extends React.Component {
   }
 
   deleteColumn = () => {
-    if (this.state.columns === 1) {
+    if (this.state.columns <= 1) {
       this.resetState()
       return
     }
@@ -59,7 +59,9 @@ export default class App extends React.Component {
     this.setState({color : event.target.value})
   }
 
+
   render() {
+  console.log(this.state)
     return (
       <div className="page">
         <h1>React Painter</h1>
@@ -68,9 +70,9 @@ export default class App extends React.Component {
           <button onClick={this.addRow}>Add Row</button>
           <button onClick={this.deleteColumn}>Remove Column</button>
           <button onClick={this.deleteRow}>Remove Row</button>
-          <button>Fill Uncolored</button>
-          <button>Fill All</button>
-          <button>Reset Colors</button>
+          {/*<button>Fill Uncolored</button>*/}
+          {/*<button>Fill All</button>*/}
+          {/*<button>Reset Colors</button>*/}
         </div>
         <div className="selectColor">
           <div>
