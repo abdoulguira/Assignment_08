@@ -8,28 +8,51 @@ export default class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      rows: 5, 
-      columns: 5, 
+      rows: 0, 
+      columns: 0, 
       color: "transparent"
     }
   }
   
 
   addRow = () => {
+    if (this.state.columns === 0) {
+      this.resetStateToOne()
+      return
+    }
     this.setState(prevState => ({rows: prevState.rows + 1,}))
   }
 
   deleteRow = () => {
+    if (this.state.rows === 1) {
+      this.resetState()
+      return
+    }
     this.setState(prevState => ({rows: prevState.rows - 1,}))
   }
 
   addColumn = () => {
+    if (this.state.rows === 0) {
+      this.resetStateToOne()
+      return
+    }
     this.setState(prevState => ({columns: prevState.columns + 1,}))
   }
 
   deleteColumn = () => {
+    if (this.state.columns === 1) {
+      this.resetState()
+      return
+    }
     this.setState(prevState => ({columns: prevState.columns - 1,}))
+  }
 
+  resetState = () => {
+    this.setState({rows: 0, columns: 0})
+  }
+
+  resetStateToOne = () => {
+    this.setState({rows: 1, columns: 1})
   }
 
   setColor = (event) => {
